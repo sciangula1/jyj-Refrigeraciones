@@ -8,7 +8,7 @@ const swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev', // Botón de anterior
     },
     autoplay: {
-        delay: 3000, // Cambia de diapositiva cada 3 segundos
+        delay: 5000, // Cambia de diapositiva cada 3 segundos
         disableOnInteraction: false, // No detiene el autoplay al interactuar
     },
     breakpoints: {

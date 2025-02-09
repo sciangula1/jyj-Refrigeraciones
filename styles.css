@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(214, 233, 241) !important;
+  background-color: rgb(255, 255, 255) !important;
   
 }
 
@@ -23,16 +23,58 @@ p {
 
 }
 
-header {
-  background-color: #25252548;
-  color: white;
-  padding: 15px;
+
+
+#nosotros{
   text-align: center;
+  margin: auto;
+  background-image: url("fotos/aire4.webp");
+  height: 950px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative; /* Necesario para posicionar la capa semitransparente */
+}
+ /* Capa semitransparente */
+ #nosotros::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.425); /* Fondo negro semitransparente */
+  z-index: 0; /* Coloca la capa detrás del contenido */
+}
+#nosotros h1 {
+  color: white !important;
+  font-size: 3em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  position: relative; /* Asegura que el texto esté sobre la capa */
+  z-index: 1; /* Coloca el texto sobre la capa semitransparente */
+  padding-top: 200px;
+}#nosotros p {
+  color: white !important;
+  font-size: 18px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  position: relative; /* Asegura que el texto esté sobre la capa */
+  z-index: 1; /* Coloca el texto sobre la capa semitransparente */
+  
 }
 
-.container-espaciado {
-
-  height: 50px;
+#nosotros a{
+  text-decoration: none;
+  color: white;
+  
+  position: relative;
+  z-index: 1;
+  background-color: #036ffc;
+  padding: 20px;
+  border-radius: 8px;
+ 
+}
+#nosotros a:hover{
+  background-color: #00306e;
 }
 
 .container-fluid a {
@@ -40,8 +82,8 @@ header {
 }
 
 .logo img {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   border-radius: 5px;
 }
 
@@ -54,14 +96,16 @@ header {
 }
 
 nav{
-  background-color: #00306e !important;
+  background-color: #171718cb!important;
   color: black;
 }
 
 nav a {
   color: rgb(255, 255, 255) !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   margin: 0 15px;
   text-decoration: none;
+  
 }
 
 .nav-link:hover {
@@ -124,17 +168,22 @@ nav a {
 
 /* Sección "Nuestras Redes" */
 .social-section {
-  background-color: #f8f9fa;
-  padding: 10px;
   text-align: center;
   justify-items: center;
-  margin-top: 100px;
-}
+  margin-top: 10px;
 
+  
+  
+}
+#redes{
+  background-color: #d2d1d6a4 !important;
+}
 .social-icons a {
   font-size: 100px;
   margin: 0 15px;
   color: #00306e;
+  
+  
 }
 
 .social-icons-footer a {
@@ -144,12 +193,12 @@ nav a {
 }
 
 .social-icons a :hover {
-  color:  #7d8bdb;
+  color:  #202020;
 }
 
 /* Footer */
 .footer {
-  background-color: rgb(31, 32, 32);
+  background-color: #171718!important;;
   color: white;
   padding: 20px 0;
   text-align: center;
@@ -192,15 +241,17 @@ section {
 /* Estilos básicos para el contenedor del carrusel */
 
 .swiper-container {
-  width: 100%;
+  
+  width: 100vw;
   max-width: 80%;
+  overflow: scroll;
 
   /* Ancho máximo del 80% del contenedor */
   margin: 0 auto;
   /* Centrar el carrusel */
   padding: 5px 0;
   /* Espaciado vertical */
-  overflow: hidden;
+  
   position: relative;
 
 }
@@ -208,14 +259,13 @@ section {
 /* Estilos para las imágenes */
 .swiper-slide img {
   width: 100%;
-  height: 400px;
+  padding: 20px;
+  height: 500px;
   max-width: 500px;
-  
-  object-fit: cover;
-
   border-radius: 10px;
   justify-content: center;
   align-items: center;
+  object-fit: contain;
   /* Bordes redondeados */
 }
 
@@ -303,23 +353,29 @@ section {
 
 
   display: grid;
-  grid-template-columns: repeat(auto-fill,
-      minmax(300px, 2fr));
-  gap: 10px;
+  grid-template-columns: 1fr;
+  
   margin: 0 auto;
-  justify-content: center;
+  justify-items: center !important;
+ 
 }
 
 .card {
-  width: 100%;
+  width: 80%;
   height: auto;
-  border-radius: 8px;
+  border-radius:8px;
+  justify-content: center;
+  align-items: center;
   
 }
 .card img{
   width: 100%;
+  height: 300px;
   object-fit: cover;
-  height: 400px;
+  border-radius: 10px;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
 }
 
 
@@ -330,7 +386,7 @@ section {
   max-width: 400px;
   text-align: justify;
   color: white;
- background-color: #00306e ;
+ background-color: #202020 ;
 }
 
 .whatsapp-float {
@@ -380,7 +436,10 @@ section {
   text-decoration: none;
 
 }
-
+.container-marcas{
+  background-color: #d2d1d6a4 !important;
+  
+}
 .container-logos {
   display: grid;
   grid-template-columns: repeat(auto-fit,
@@ -388,10 +447,11 @@ section {
   gap: 10px;
   max-width: 1000px;
   margin: 0 auto;
+  justify-items: center;
 }
 
 .container-logos img {
-  width: 100%;
+  width: 300px;
   height: auto;
   border-radius: 8px;
 }
@@ -402,6 +462,19 @@ section {
   margin-top: 10px;
 
 }
+
+.container-contacto{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,
+  minmax(300px, 1fr));
+  gap: 10px;
+  margin: 0 auto;
+  align-items: center;
+  justify-items: center;
+}
+
+
+
 
 footer {
   background-color: #00306e !important;
